@@ -13,8 +13,8 @@ export default function Todo() {
   const ClickHandler = async () => {
     const todo = inputRef.current?.value.toString();
     if (todo) {
-      const data = { todo: todo };
-      const res = await createTodo(data);
+      const newTodo = { todo: todo };
+      const res = await createTodo(newTodo);
       inputRef.current!.value = '';
       if (res) {
         Getdata();

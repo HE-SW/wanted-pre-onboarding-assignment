@@ -1,5 +1,18 @@
 import styled from 'styled-components';
 
+type ButtonType = '수정' | '삭제' | '취소';
+
+const ButtonColorHander = (ButtonType: ButtonType) => {
+  switch (ButtonType) {
+    case '수정':
+      return '#FFB3B3';
+    case '삭제':
+      return '#QE2E2W';
+    case '취소':
+      return '#EAE3D2';
+  }
+};
+
 export const Container = styled.div`
   background-color: #fff;
   display: flex;
@@ -46,19 +59,6 @@ export const Button = styled.button`
     opacity: 0.7;
   }
 `;
-
-type ButtonType = '수정' | '삭제' | '취소';
-
-const ButtonColorHander = (ButtonType: ButtonType) => {
-  switch (ButtonType) {
-    case '수정':
-      return '#FFB3B3';
-    case '삭제':
-      return 'gray';
-    case '취소':
-      return '#EAE3D2';
-  }
-};
 
 export const TodoContainer = styled.div`
   display: flex;

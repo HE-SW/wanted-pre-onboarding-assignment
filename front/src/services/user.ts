@@ -1,4 +1,5 @@
 import { UserApi } from './Axios';
+
 type User = {
   email: string;
   password: string;
