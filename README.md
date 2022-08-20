@@ -79,7 +79,7 @@
 
 
 ### 폴더구조
-
+```
 src
 ├─components  // 컴포넌트 단위로 구현된 view, 각 컴포넌트에 필요한 state가 view와 함께 있음
 │  ├─LoginForm.tsx
@@ -97,3 +97,4 @@ src
 └─utils
    ├─LocalStorage // 로컬스토리지 관련코드
    └─Validation // 이메일 Validation
+```
