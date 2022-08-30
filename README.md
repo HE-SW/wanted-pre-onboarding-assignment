@@ -6,15 +6,30 @@
   $ cd front
   $ npm install
   $ npm start
-
-  //backend
-  $ cd back
-  $ npm install
-  $ npm start
 ```
   
+  ### 폴더구조
+```
+src
+├─components  // 컴포넌트 단위로 구현된 view, 각 컴포넌트에 필요한 state가 view와 함께 있음
+│  ├─LoginForm.tsx
+│  ├─Todo.tsx
+│  ├─TodoForm.tsx
+│  └─TodoList.tsx
+├─pages // 페이지 단위 뷰
+│  ├─LoginPage
+│  ├─TodoPage
+│  └─SigninPage
+├─services // 서버 관련 코드
+│  ├─Axios // 서버 api
+│  ├─todoApi 
+│  └─userApi 
+└─utils
+   ├─LocalStorage // 로컬스토리지 관련코드
+   └─Validation // 이메일 Validation
+```
   
-- 사용한 라이브러리 목록은 아래와 같습니다.
+- 사용한 라이브러리 목록
   - React Router
   - HTTP Client 라이브러리(Axios)
   - 스타일링 관련 라이브러리(Styled Components)
@@ -78,23 +93,4 @@
 ![수정삭제](https://user-images.githubusercontent.com/99246644/185641705-369f4b07-562d-41e7-a4a0-7148b96d09b6.gif)
 
 
-### 폴더구조
-```
-src
-├─components  // 컴포넌트 단위로 구현된 view, 각 컴포넌트에 필요한 state가 view와 함께 있음
-│  ├─LoginForm.tsx
-│  ├─Todo.tsx
-│  ├─TodoForm.tsx
-│  └─TodoList.tsx
-├─pages // 페이지 단위 뷰
-│  ├─LoginPage
-│  ├─TodoPage
-│  └─SigninPage
-├─services // 서버 관련 코드
-│  ├─Axios // 서버 api
-│  ├─todoApi 
-│  └─userApi 
-└─utils
-   ├─LocalStorage // 로컬스토리지 관련코드
-   └─Validation // 이메일 Validation
-```
+
