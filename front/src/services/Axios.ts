@@ -1,11 +1,7 @@
-import axios, { AxiosRequestConfig, AxiosInstance } from 'axios';
+import axios, { AxiosInstance } from 'axios';
 import { GetTokenStorage } from '../utils/Localstorage';
 
 const BASE_URL = 'http://localhost:8000';
-
-const axiosCon: AxiosRequestConfig = {
-  baseURL: BASE_URL,
-};
 
 export const TodoApi: AxiosInstance = axios.create({
   baseURL: BASE_URL,
@@ -14,4 +10,6 @@ export const TodoApi: AxiosInstance = axios.create({
   },
 });
 
-export const UserApi = axios.create(axiosCon);
+export const UserApi: AxiosInstance = axios.create({
+  baseURL: BASE_URL,
+});

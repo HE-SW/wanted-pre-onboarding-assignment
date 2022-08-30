@@ -3,7 +3,7 @@ import React, { useState, useRef } from 'react';
 import * as LoginForm from '../components/LoginForm';
 import { useNavigate } from 'react-router-dom';
 import * as vaildation from '../utils/Validation';
-import { UserSignUp } from '../services/user';
+import { UserSignUp } from '../services/userApi';
 
 const Container = styled.div`
   background-color: #fff;
