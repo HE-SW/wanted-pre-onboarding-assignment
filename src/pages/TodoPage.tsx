@@ -31,7 +31,7 @@ export default function Todo() {
     } else {
       Getdata();
     }
-  }, []);
+  }, [nav]);
   return (
     <div>
       <Container>

@@ -95,7 +95,7 @@ function Login() {
     if (GetTokenStorage()) {
       nav('/todo');
     }
-  }, []);
+  }, [nav]);
   return (
     <Container>
       <LoginForm.Title>로그인</LoginForm.Title>
