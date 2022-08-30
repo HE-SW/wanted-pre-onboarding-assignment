@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import * as LoginForm from '../components/LoginForm';
 import { useNavigate } from 'react-router-dom';
 import * as vaildation from '../utils/Validation';
@@ -80,9 +80,9 @@ function Login() {
       const res = await UserSignIn(data);
       const token = res.access_token;
       SetTokenStorage(token);
-      nav('/todo');
+      ToTodoPage();
     } catch (e: any) {
-      console.log(e.response.data);
+      alert(e.response.data.message);
     }
   };
 
@@ -91,11 +91,16 @@ function Login() {
   ) => {
     nav('/signin');
   };
-  useEffect(() => {
+
+  const ToTodoPage = useCallback(() => {
     if (GetTokenStorage()) {
       nav('/todo');
     }
   }, [nav]);
+
+  useEffect(() => {
+    ToTodoPage();
+  }, [ToTodoPage]);
   return (
     <Container>
       <LoginForm.Title>로그인</LoginForm.Title>

@@ -1,4 +1,4 @@
-import { TypeTodo } from '../services/todoApi';
+import { TypeTodo } from '../../services/todoApi';
 import Todo from './Todo';
 
 export default function TodoList(props: {

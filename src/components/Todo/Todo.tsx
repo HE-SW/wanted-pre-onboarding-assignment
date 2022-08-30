@@ -1,11 +1,13 @@
-import { TypeTodo } from '../services/todoApi';
-import { deleteTodo, updateTodo } from '../services/todoApi';
+import { TypeTodo } from '../../services/todoApi';
+import { todoAPI } from '../../services/todoApi';
 import { useState } from 'react';
 import { useRef } from 'react';
 import { TodoInput, TodoButton, TodoContainer, TodoSpan } from './TodoForm';
 
+const todoApi = new todoAPI();
+
 const deleteHandler = async (id: number, Getdata: () => void) => {
-  await deleteTodo(id);
+  await todoApi.deleteTodo(id);
   Getdata();
 }; // Delete Api 호출 후 변경된 Data 다시 반영
 
@@ -18,7 +20,7 @@ const checkboxHandler = async (
   if (setIsCheck) {
     setIsCheck((prev) => !prev);
   }
-  await updateTodo(id, todo, isCompleted);
+  await todoApi.updateTodo(id, todo, isCompleted);
 }; // Update Api에 isCompleted값만 반영
 
 const updateIuputHandler = async (
@@ -31,7 +33,7 @@ const updateIuputHandler = async (
   if (SetUpdateClick) {
     SetUpdateClick((prev) => !prev);
   }
-  await updateTodo(id, todo, isCompleted);
+  await todoApi.updateTodo(id, todo, isCompleted);
   Getdata();
 }; // Update Api에 변경된 todo값 isCompleted=false 반영
 
