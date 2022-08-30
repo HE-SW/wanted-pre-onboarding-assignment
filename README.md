@@ -1,5 +1,8 @@
 # 원티드 프리온보딩 프론트엔드 - 선발 과제
 
+### 접속 링크
+https://he-sw.github.io/wanted-pre-onboarding-fe/
+
   - 프로젝트의 실행 방법
   ```zsh
   // client
