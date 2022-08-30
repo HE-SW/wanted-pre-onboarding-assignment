@@ -81,7 +81,7 @@ function Signin() {
         nav('/');
       }
     } catch (e: any) {
-      console.log(e.response.data);
+      alert(e.response.data.message);
     }
   };
 
